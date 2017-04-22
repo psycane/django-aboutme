@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1"> {% load static %}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+</head>
+
+<body>
+    <a href='/logout/' style="color: white; text-decoration: none;"><button class="btn btn-danger btn-md" style="position: absolute; top: 20px; right: 20px;">Logout</button></a>
+    <div class="container">
+        <div class="page-header">
+            <h2>Welcome {{ first_name }} {{ last_name }}</h2>
+        </div>
+        <a href='/show_bookings/'><button class="btn btn-success btn-lg">Show All Bookings</button></a>
+        <br><br>
+        {% if bookings %}
+            <h2>Bookings:</h2>
+
+            {% for booking_name, booking_fairs in bookings.items %}
+                <h4>&nbsp;&nbsp;{{ booking_name }}:</h4>
+                <ul>
+                {% for fair in booking_fairs %}
+                    <li>{{ fair }}</li>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+
+</html>

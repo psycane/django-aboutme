@@ -1,0 +1,60 @@
+.nav-tabs>li.active>a {
+	font-size: large;
+}
+
+input {
+	height: 35px;
+	border: 1px solid blue;
+	border-radius: 0px;
+	width: 100%;
+	padding: 5px;
+}
+
+.tab-content {
+	padding: 10px;
+}
+
+.tab-content .form_description {
+	color: darkblue;
+}
+
+#login_button {
+	width: 250px;
+}
+
+#register_button {
+	width: 250px;
+}
+
+.fa-exclamation-triangle {
+	color: red;
+}
+
+.error_div {
+	background-color: white;
+	border: 1px solid red;
+	padding: 10px;
+	margin-left: 10px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	position: absolute;
+	margin-top: -8px;
+	display: none;
+	width: 250px;
+	z-index: 1;
+}
+
+.tail {
+	width: 0px;
+	height: 0px;
+	border: 10px solid;
+	border-color: transparent red transparent transparent;
+	position: absolute;
+	top: 8px;
+	left: -20px;
+}
+
+.errorlist{
+	color: red;
+}
