@@ -12,5 +12,5 @@ class Booking(models.Model):
 
 class Payment(models.Model):
 	fair_amount = models.FloatField()
-	booking = models.ForeignKey(Booking)
+	booking = models.OneToOneField(Booking)
 
